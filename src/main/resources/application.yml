@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /mongodb-service
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  profiles:
+    active: local
+  application:
+    name: mongodb-basic-service
+  data:
+    mongodb:
+      host: 172.17.0.2
+      port: 27017
+      database: mongoexemplo
+
+logging:
+  level:
+    br: TRACE
+
+---
+spring:
+  profiles: local
